@@ -40,10 +40,21 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <junit.version>4.12</junit.version>
+        <jaxb.version>2.3.1</jaxb.version>
     </properties>
 
     <dependencies>
-        <!-- JAXB is built into Java 8, no explicit dependency needed -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>${jaxb.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>${jaxb.version}</version>
+        </dependency>
 
         <!-- SLF4J -->
         <dependency>
